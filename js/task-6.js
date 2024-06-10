@@ -19,6 +19,8 @@ function createBoxes() {
     return;
   }
   destroyBoxes();
+
+  const fragment = document.createDocumentFragment(); 
   
   for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
@@ -26,12 +28,12 @@ function createBoxes() {
     box.style.width = `${30 + i * 10}px`;
     box.style.height = `${30 + i * 10}px`;
     box.style.backgroundColor = getRandomHexColor();
-    boxContainer.append(box);
+    fragment.append(box);
+    input.value = '';
+
   }
-  
-  
+  boxContainer.append(fragment);
 }
-input.value = '';
 
 function destroyBoxes() {
   boxContainer.innerHTML = '';  
