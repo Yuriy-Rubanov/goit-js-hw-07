@@ -29,8 +29,9 @@ function createBoxes() {
     boxContainer.append(box);
   }
   
-  input.value = '';
+  
 }
+input.value = '';
 
 function destroyBoxes() {
   boxContainer.innerHTML = '';  
